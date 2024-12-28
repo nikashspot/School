@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Library</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #FFD700;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            margin: 20px 0;
+        }
+
+        .notes-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px; /* Added gap for spacing */
+            margin: 20px 0;
+        }
+
+        .note-card {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            width: 250px; /* Fixed width for note cards */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        .note-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .notes-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .note-card {
+                width: 90%; /* Allow cards to take up more space on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>School Library</h1>
+        <nav>
+            <ul>
+            <li><a href="file:///O:/Gorkha/main.html#">Home</a></li>
+            <li><a href="file:///O:/Gorkha/home.html">News</a></li> 
+            <li><a href="file:///O:/Gorkha/work.html">Notes</a></li>
+            <li><a href="file:///O:/Gorkha/contact.html">Contact</a></li>
+            <li><a href="file:///O:/Gorkha/about.html">About</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to the School Library</h2>
+            <p>Your one-stop destination for all your study materials.</p>
+        </section>
+
+        <section id="notes">
+            <h2>Available Notes</h2>
+            <div class="notes-container">
+                <div class="note-card" style="animation-delay: 0.1s;">
+                    <img src="maths.jpg" alt="Math Notes">
+                    <h3>Math Notes</h3>
+                </div>
+                <div class="note-card" style="animation-delay: 0.2s;">
+                    <img src="science.jpg" alt="Science Notes">
+                    <h3>Science Notes</h3>
+                </div>
+                <div class="note-card" style="animation-delay: 0.3s;">
+                    <img src="computer.jpg" alt="Computer Notes">
+                    <h3>Computer Notes</h3>
+                </div>
+                <div class="note-card" style="animation-delay: 0.4s;">
+                    <img src="nepali.jpg" alt="Nepali Notes">
+                    <h3>Nepali Notes</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 School Library. All rights reserved.</p>
+    </footer>
+</body>
+</html>
